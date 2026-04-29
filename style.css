@@ -348,7 +348,7 @@ footer{
   display:flex;align-items:center;justify-content:space-between;
   background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);
 }
-.fmark{font-family:'Cinzel Decorative',serif;font-size:10px;color:rgba(139,0,0,.4);letter-spacing:4px}
+.fmark{font-family:'Cinzel Decorative',serif;font-size:10px;color:#8B0000;letter-spacing:4px}
 .fjp{font-family:'Noto Serif JP',serif;font-size:10px;color:rgba(139,0,0,.3);letter-spacing:6px}
 
 /* ── REVEAL ANIM ── */

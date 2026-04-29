@@ -426,3 +426,13 @@ body{
   max-width:100%;
   overflow:hidden;
 }
+.t-input-line{display:flex;align-items:center;gap:8px;margin-top:6px}
+.term-input{
+  background:transparent;border:none;outline:none;
+  color:var(--text);font-family:'Share Tech Mono',monospace;
+  font-size:11px;flex:1;caret-color:var(--cr2);
+  letter-spacing:1px;
+}
+.term-input::placeholder{color:rgba(122,96,96,0.4)}
+.t-error{color:#CC4444}
+.t-info{color:var(--gold)}

@@ -1,7 +1,7 @@
 # 🛡️ Portfolio - Cursed Realm
 
 🌐 **Live Website**  
-[Aman Kothari - Cybersec Portfolio](https://drag0nslay.github.io/Portfolio/aman_kothari_portfolio.html)
+[Aman Kothari - Cybersec Portfolio](https://amankothari.netlify.app/aman_kothari_portfolio.html))
 
 ---
 

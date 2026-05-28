@@ -306,3 +306,53 @@ function runCommand(raw) {
   const tb = document.getElementById("terminalBody");
   if (tb) tb.scrollTo({ top: tb.scrollHeight, behavior: "smooth" });
 }
+/* ── CONTACT FORM ── */
+const contactForm = document.getElementById("contact-form");
+const formStatus  = document.getElementById("form-status");
+const formBtn     = document.getElementById("form-btn");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // loading state
+    formBtn.textContent = "// TRANSMITTING...";
+    formBtn.disabled = true;
+    formBtn.style.opacity = "0.6";
+    formStatus.style.display = "none";
+
+    try {
+      const res = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { "Accept": "application/json" }
+      });
+
+      if (res.ok) {
+        // success
+        formStatus.textContent = "[+] SIGNAL TRANSMITTED — MESSAGE RECEIVED.";
+        formStatus.style.color = "#2A7A2A";
+        formStatus.style.borderColor = "rgba(42,122,42,0.4)";
+        formStatus.style.background = "rgba(0,30,0,0.5)";
+        formStatus.style.display = "block";
+        contactForm.reset();
+        formBtn.textContent = "// SIGNAL SENT ✓";
+        formBtn.style.borderColor = "#2A7A2A";
+        formBtn.style.color = "#2A7A2A";
+      } else {
+        throw new Error("Server error");
+      }
+
+    } catch (err) {
+      // error
+      formStatus.textContent = "[!] TRANSMISSION FAILED — TRY DIRECT CONTACT.";
+      formStatus.style.color = "#CC4444";
+      formStatus.style.borderColor = "rgba(204,68,68,0.4)";
+      formStatus.style.background = "rgba(30,0,0,0.5)";
+      formStatus.style.display = "block";
+      formBtn.textContent = "// RETRY SIGNAL";
+      formBtn.disabled = false;
+      formBtn.style.opacity = "1";
+    }
+  });
+}

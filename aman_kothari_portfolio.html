@@ -16,7 +16,9 @@
     <!-- VIDEO BACKGROUND — place sukuna_edit.mp4 in same folder -->
     <div class="video-bg">
         <video autoplay muted loop playsinline preload="auto">
-            <source src="https://res.cloudinary.com/deear34fi/video/upload/q_auto/f_auto/v1779960437/sukuna_edit2_yfc9eb.mp4" type="video/mp4">
+            <source
+                src="https://res.cloudinary.com/deear34fi/video/upload/q_auto/f_auto/v1779960437/sukuna_edit2_yfc9eb.mp4"
+                type="video/mp4">
         </video>
     </div>
     <div class="video-overlay"></div>
@@ -363,18 +365,18 @@
                     <div class="tdot g"></div>
                     <div class="ttitle">kothari@cursed-realm:~ [drag0nslay]</div>
                 </div>
-                    <div class="t-line"><span class="tpr">kothari@cursed-realm:~$</span> <span class="tout"> type a
-                            command below...</span></div>
-                    <div class="t-line"><span class="tout">&nbsp;available: whoami · skills · projects · achievements ·
-                            contact · socials · sudo su · clear · help</span></div>
-                    <div class="t-line">&nbsp;</div>
-                    <div id="termOutput"></div>
-                    <div class="t-input-line">
-                        <span class="tpr">kothari@cursed-realm:~$</span>
-                        <input type="text" id="termInput" class="term-input" placeholder="enter command..."
-                            autocomplete="off" spellcheck="false" />
-                    </div>
+                <div class="t-line"><span class="tpr">kothari@cursed-realm:~$</span> <span class="tout"> type a
+                        command below...</span></div>
+                <div class="t-line"><span class="tout">&nbsp;available: whoami · skills · projects · achievements ·
+                        contact · socials · sudo su · clear · help</span></div>
+                <div class="t-line">&nbsp;</div>
+                <div id="termOutput"></div>
+                <div class="t-input-line">
+                    <span class="tpr">kothari@cursed-realm:~$</span>
+                    <input type="text" id="termInput" class="term-input" placeholder="enter command..."
+                        autocomplete="off" spellcheck="false" />
                 </div>
+            </div>
         </section>
 
         <div class="divider">
@@ -394,8 +396,9 @@
                     <div class="contact-links">
                         <a class="clink" href="mailto:ak5518786@gmail.com"><span
                                 class="clink-ic">@</span><span>ak5518786@gmail.com</span></a>
-                        <a class="clink" href="https://www.linkedin.com/in/aman-kothari-995944274/" target="_blank"><span
-                                class="clink-ic">&#11041;</span><span>LinkedIn — Aman Kothari</span></a>
+                        <a class="clink" href="https://www.linkedin.com/in/aman-kothari-995944274/"
+                            target="_blank"><span class="clink-ic">&#11041;</span><span>LinkedIn — Aman
+                                Kothari</span></a>
                         <a class="clink" href="https://github.com/Drag0nSlay" target="_blank"><span
                                 class="clink-ic">&#9670;</span><span>GitHub — Drag0nSlay</span></a>
                         <a class="clink" href="https://tryhackme.com/p/Drag0nSlay" target="_blank"><span
@@ -403,11 +406,27 @@
                     </div>
                 </div>
                 <div class="reveal">
-                    <div class="form-group"><input type="text" placeholder="// YOUR DESIGNATION" /></div>
-                    <div class="form-group"><input type="email" placeholder="// CONTACT VECTOR" /></div>
-                    <div class="form-group"><textarea
-                            placeholder="// STATE YOUR INTENT — BOUNTIES, COLLABS, OPPORTUNITIES"></textarea></div>
-                    <button class="btn-p" style="width:100%;text-align:center">// TRANSMIT SIGNAL</button>
+                    <form id="contact-form" action="https://formspree.io/f/xbdbqnzk" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="// YOUR DESIGNATION" required
+                                autocomplete="off" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="// CONTACT VECTOR" required
+                                autocomplete="off" />
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message"
+                                placeholder="// STATE YOUR INTENT — BOUNTIES, COLLABS, OPPORTUNITIES"
+                                required></textarea>
+                        </div>
+                        <div id="form-status"
+                            style="display:none;font-size:11px;letter-spacing:2px;margin-bottom:12px;padding:10px 14px;border:1px solid">
+                        </div>
+                        <button type="submit" class="btn-p" id="form-btn" style="width:100%;text-align:center">
+                            // TRANSMIT SIGNAL
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>

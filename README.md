@@ -213,3 +213,4 @@ Contact form worked locally but failed silently on Netlify production. Browser b
 ---
 
 ⭐ If you find this terminal style configuration interesting or useful, feel free to star the repository!
+> “If you use this project, please give proper credit.”
